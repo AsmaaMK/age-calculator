@@ -4,6 +4,10 @@
     color: #373B44;
 }
 
+:root {
+    font-size: 30px;
+}
+
 body {
     margin: 0;
     height: 100vh;
