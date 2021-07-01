@@ -1,0 +1,103 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #373B44;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    background: #73C8A9;
+    background: -webkit-linear-gradient(to top, #373B44, #73C8A9);
+    background: linear-gradient(to top, #373B44, #73C8A9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.app {
+    background-color: #ffffffa8;
+    padding: 1em 1em 1.5em 1em;
+    border-radius: 1em;
+    text-align: center;
+    position: relative;
+    max-width: 16em;
+    width: 90%;
+}
+
+h1 {
+    margin: 0 0 0.5em 0;
+    padding: 0.25em;
+    border-bottom: #373B44 0.05em solid;
+}
+
+#age {
+    display: none;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.25em;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+input {
+    outline: none;
+    border: #373B44 0.1em solid;
+    border-radius: 0.2em;
+    background-color: #fff0;
+    font-weight: bold;
+    font-size: 0.8rem;
+    margin-bottom: 0.5em;
+}
+
+input:focus {
+    border-color: #0b7251;
+}
+
+button {
+    cursor: pointer;
+    color: #fff;
+    background-color: #373B44;
+    border: none;
+    border-radius: 0.25em;
+    padding: 0.18em 0.5em;
+    transition: ease color 0.2s;
+    transition: ease background-color 0.2s;
+    border: #373B44 0.1em solid;
+    font-weight: bold;
+    font-size: 0.8rem;
+    margin-bottom: 0.5em;
+}
+
+button:hover, button:focus {
+    color: #373B44;
+    background-color: #73C8A9;
+    outline: none;
+}
+
+span {
+    color: #0b7251;
+}
+
+p {
+    margin: 0;
+}
+
+#error {
+    position: absolute;
+    background-color: #ff9494ed;
+    color: #A50203;
+    padding: 00.5em;
+    top: 5.5em;
+    width: 70%;
+    left: 15%;
+    display: none;
+}
+
+@media only screen and (max-width: 500px){
+    :root {
+        font-size: 20px;
+    }
+}

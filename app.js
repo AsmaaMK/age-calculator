@@ -5,7 +5,7 @@ const birthDay = document.getElementById('birth-day');
 const year = document.getElementById('year');
 const month = document.getElementById('month');
 const day = document.getElementById('day');
-const age = document.getElementById('age');
+const ageDev = document.getElementById('age');
 const calcBtn = document.getElementById('calc');
 const error = document.getElementById('error');
 
@@ -54,7 +54,7 @@ function formatDate(date) {
  */
 const showError = (message) => {
     error.innerHTML = message;
-    error.style.display = 'unset';
+    error.style.display = 'block';
     setTimeout(() => {
         error.style.display = 'none';
     }, 2000);
@@ -120,6 +120,8 @@ const showAge = (age) => {
     year.innerHTML = stringYear;
     month.innerHTML = stringMonth;
     day.innerHTML = stringDay;
+
+    ageDev.style.display = 'block';
 };
 
 /**
@@ -152,7 +154,7 @@ calcBtn.addEventListener('click', () => {
     try {
         const dob = getDOB();
         if (isNaN(dob.year) || isNaN(dob.month) || isNaN(dob.day))
-            throw new Error('Invalid data. Please, try again.');
+            throw new Error('Invalid date. Please, try again.');
 
         const year = parseInt(dob.year);
         const month = parseInt(dob.month);
