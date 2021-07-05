@@ -81,14 +81,14 @@ const calculateAge = (day, month, year) => {
 
     age.years = currentYear - year;
 
-    if (currentMonth > month) {
+    if (currentMonth >= month) {
         age.months = currentMonth - month;
     } else {
         age.years--;
         age.months = 12 - month + currentMonth;
     }
 
-    if (currentDay > day) {
+    if (currentDay >= day) {
         age.days = currentDay - day;
     } else {
         age.months--;
@@ -113,13 +113,13 @@ const showAge = (age) => {
     let stringMonth = age.months.toString();
     let stringDay = age.days.toString();
 
-    stringYear += (age.years > 1 ? ' years' : ' year');
-    stringMonth += (age.months > 1 ? ' months' : ' month');
+    stringYear += (age.years > 1 ? ' years, ' : ' year, ');
+    stringMonth += (age.months > 1 ? ' months, ' : ' month, ');
     stringDay += (age.days > 1 ? ' days' : ' day');
 
-    year.innerHTML = stringYear;
-    month.innerHTML = stringMonth;
-    day.innerHTML = stringDay;
+    if (age.years) year.innerHTML = stringYear;
+    if (age.months) month.innerHTML = stringMonth;
+    if (age.days) day.innerHTML = stringDay;
 
     ageDev.style.display = 'block';
 };

@@ -75,7 +75,7 @@ button {
     margin-bottom: 0.5em;
 }
 
-button:hover, button:focus {
+button:hover {
     color: #373B44;
     background-color: #73C8A9;
     outline: none;
